@@ -1,0 +1,13 @@
+// Override default variables before the import
+$body-bg: #fff;
+
+// Import Bootstrap and its default variables
+@import "~bootstrap/scss/bootstrap.scss";
+
+@import url("https://fonts.googleapis.com/css?family=Pacifico&display=swap");
+
+.container-body {
+  z-index: 100;
+  position: relative;
+  background-color: $body-bg;
+}

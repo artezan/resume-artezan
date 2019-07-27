@@ -1,32 +1,30 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import Image from "./image"
+import "./header.scss"
+import Parallax from "react-rellax"
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
+const Header = ({ siteTitle, fullName, ocupation }) => (
+  <header className="cover">
+    <div className="container flex-box">
+      <div className="col-sm-6 ">
+        <div className="mh-header-info ">
+          <Parallax speed={-10} >
+            <h2>{fullName}</h2>
+            <h3>{ocupation}</h3>
+          </Parallax>
+        </div>
+      </div>
+      <div className="col-sm-6 rellax" data-rellax-speed="-4">
+        <div className="hero-img">
+          <div className="img-border">
+            <Parallax speed={-10}>
+              <Image className="img-fluid" />
+            </Parallax>
+          </div>
+        </div>
+      </div>
     </div>
   </header>
 )

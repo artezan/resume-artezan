@@ -88,10 +88,11 @@ const IndexPage = () => {
   )
 
   return (
+    
     <Layout>
       <SEO title="Home" />
       <header>
-        <h2>{personalData.fullName}</h2>
+        <h2  >{personalData.fullName}</h2>
         <h3>{personalData.ocupation}</h3>
         <p>{personalData.birthdate}</p>
         <p>{personalData.birthplace}</p>
