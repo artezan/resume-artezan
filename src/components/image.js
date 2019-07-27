@@ -26,7 +26,7 @@ const Image = ({fileName}) => {
     }
   `)
 
-  return <Img fluid={data.placeholderImage.childImageSharp.fluid} />
+  return <Img fluid={data.placeholderImage.childImageSharp.fluid} alt="CV Cesar Artezan" />
 }
 
 export default Image

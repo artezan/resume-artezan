@@ -4,9 +4,11 @@ import React from "react"
 import Image from "./image"
 import "./header.scss"
 import Parallax from "react-rellax"
+import BackgroundSection from './BgImage'
 
 const Header = ({ siteTitle, fullName, ocupation }) => (
-  <header className="cover">
+  <BackgroundSection className="cover"  >
+    <header >
     <div className="container flex-box">
       <div className="col-sm-6 ">
         <div className="mh-header-info ">
@@ -26,7 +28,8 @@ const Header = ({ siteTitle, fullName, ocupation }) => (
         </div>
       </div>
     </div>
-  </header>
+  </header> 
+  </BackgroundSection>
 )
 
 Header.propTypes = {
