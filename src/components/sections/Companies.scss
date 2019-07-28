@@ -1,0 +1,37 @@
+.companies {
+  .logo-circle {
+    width: 200px;
+  }
+  .logo-tech{
+    width: 50px;
+    max-height: 100%;
+  }
+  .title-pos{
+    font-family: "Pacifico", cursive !important;
+    color: gray;
+  }
+  .order-change-card {
+    order: -1;
+  }
+  .order-change-logo {
+    order: 13;
+  }
+  .order-card {
+    order: 13;
+  }
+  .order-logo {
+    order: -1;
+  }
+  @media (max-width: 900px) {
+    .order-change-card {
+      order: 13;
+    }
+    .order-change-logo {
+      order: -1;
+    }
+  }
+}
+
+.card-des{
+  box-shadow:  1px 2px 10px rgba(32, 32, 35, 0.1) !important;
+}

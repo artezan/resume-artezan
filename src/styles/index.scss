@@ -1,13 +1,30 @@
 // Override default variables before the import
-$body-bg: #fff;
-
+$body-bg: #ffffff;
+$primary-color: rgb(123, 93, 149);
+$theme-colors: (
+  "primary": $primary-color,
+);
 // Import Bootstrap and its default variables
 @import "~bootstrap/scss/bootstrap.scss";
+@import url("https://fonts.googleapis.com/css?family=Pacifico|Roboto+Slab&display=swap");
 
-@import url("https://fonts.googleapis.com/css?family=Pacifico&display=swap");
+:root {
+  --primary: $primary-color;
+}
 
+html body {
+  font-family: "Roboto Slab", serif;
+  background-color: rgba(255, 255, 255, 0);
+}
 .container-body {
   z-index: 100;
   position: relative;
   background-color: $body-bg;
+}
+
+@media (max-width: 900px) {
+  .container-body {
+    display: block;
+    border-radius: 30px;
+  }
 }

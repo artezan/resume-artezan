@@ -35,11 +35,12 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
-    "develop": "env-cmd  gatsby develop",
+    "develop": "env-cmd  npm run clean && gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
+    "clean": "gatsby clean"
   },
   "repository": {
     "type": "git",

@@ -6,6 +6,8 @@ import SEO from "../components/seo"
 import { useStaticQuery, graphql } from "gatsby"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import Img from "gatsby-image"
+import { AboutMe } from "../components/sections/AboutMe"
+import { Companies } from "../components/sections/Companies"
 
 /* export const query = graphql`
   query {
@@ -29,9 +31,7 @@ const IndexPage = () => {
     allContentfulExperience: {
       edges: [{ node: experienceData }],
     },
-    allContentfulJobs: {
-      edges: [{ node: jobsData }],
-    },
+    allContentfulJobs: { edges: jobsData },
   } = useStaticQuery(
     graphql`
       query {
@@ -61,17 +61,27 @@ const IndexPage = () => {
             }
           }
         }
-        allContentfulJobs(sort: { fields: startDate, order: ASC }) {
+        allContentfulJobs(sort: { fields: startDate, order: DESC }) {
           edges {
             node {
               company
               isCurrent
               titlePosition
               country
+              id
               startDate(formatString: "YYYY-MM")
+              endDate(formatString: "YYYY-MM")
+              logo {
+                fluid(maxWidth: 300) {
+                  ...GatsbyContentfulFluid
+                }
+                file {
+                  url
+                }
+              }
               techs {
                 logo {
-                  fluid(maxWidth: 500) {
+                  fluid(maxWidth: 300) {
                     ...GatsbyContentfulFluid
                   }
                   file {
@@ -79,6 +89,9 @@ const IndexPage = () => {
                   }
                 }
                 name
+              }
+              description {
+                json
               }
             }
           }
@@ -88,30 +101,22 @@ const IndexPage = () => {
   )
 
   return (
-    
     <Layout>
       <SEO title="Home" />
-      <header>
-        <h2  >{personalData.fullName}</h2>
+
+      {/*  <h2  >{personalData.fullName}</h2>
         <h3>{personalData.ocupation}</h3>
         <p>{personalData.birthdate}</p>
         <p>{personalData.birthplace}</p>
-        <p>{personalData.currentCity}</p>
-        {documentToReactComponents(personalData.description.json)}
-      </header>
+        <p>{personalData.currentCity}</p> */}
+      <AboutMe personalData={personalData} />
+      <Companies description={experienceData.description} jobsData={jobsData} />
 
-      <section>
-        <h2>Experiencia</h2>
-        {documentToReactComponents(experienceData.description.json)}
-        <h3>Empresas</h3>
-        <p>{jobsData.company}</p>
-        {console.log(jobsData)}
-        {/* <img src={jobsData.techs[0].logo.file.url}></img> */}
-      </section>
-      <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-        {/* <Image url={jobsData.techs[0].logo.file.url} /> */}
+      {/* <img src={jobsData.techs[0].logo.file.url}></img> */}
+
+      {/* <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
         <Img fluid={jobsData.techs[0].logo.fluid} loading="lazy" />
-      </div>
+      </div> */}
     </Layout>
   )
 }
