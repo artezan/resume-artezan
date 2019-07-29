@@ -1,8 +1,9 @@
 module.exports = {
   siteMetadata: {
     title: `Cesar Artezan Cabrera`,
-    description: `CV Cesar Artezan Cabrera`,
-    author: `@artezan`,
+    description: `CV | Resume of Full Stack Developer Cesar Artezan Cabrera`,
+    author: `@CArtezan`,
+    url: `https://keen-wozniak-403396.netlify.com`
   },
   plugins: [
     {
