@@ -69,9 +69,6 @@ function SEO({ description, lang, meta, title }) {
           content: metaDescription,
         },
         {
-          charset="utf-8",
-        },
-        {
           property: `og:url`,
           content: `https://keen-wozniak-403396.netlify.com`,
         },
