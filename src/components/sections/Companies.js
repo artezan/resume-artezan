@@ -84,7 +84,7 @@ export const Companies = ({ description, jobsData }) => {
             <Theme
               company={company}
               logo={logo}
-              isOdd={!!index % 2}
+              isOdd={!!(index % 2)}
               jobData={rest}
             />
           </div>
