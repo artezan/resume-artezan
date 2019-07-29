@@ -73,7 +73,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           property: `og:url`,
-          content: site.siteMetadata.url,
+          content: `https://keen-wozniak-403396.netlify.com`,
         },
       ].concat(meta)}
     />
