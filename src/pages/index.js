@@ -102,7 +102,7 @@ const IndexPage = () => {
 
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO title="Cesar Artezan" />
 
       {/*  <h2  >{personalData.fullName}</h2>
         <h3>{personalData.ocupation}</h3>
