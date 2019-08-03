@@ -22,9 +22,9 @@ html body {
   background-color: $body-bg;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 600px) {
   .container-body {
     display: block;
-    border-radius: 30px;
+    border-radius: 30px !important;
   }
 }

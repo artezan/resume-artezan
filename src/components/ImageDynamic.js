@@ -4,7 +4,7 @@ import Img from "gatsby-image"
 
 // Note: You can change "images" to whatever you'd like.
 
-const ImageDynamic = ({ filename, alt }) => (
+const ImageDynamic = ({ filename, alt, className, maxWidth }) => (
   <StaticQuery
     query={graphql`
       query {
@@ -31,7 +31,7 @@ const ImageDynamic = ({ filename, alt }) => (
         return null
       }
 
-      return <Img alt={alt} fluid={image.node.childImageSharp.fluid} />
+      return <Img alt={alt}  fluid={image.node.childImageSharp.fluid} />
     }}
   />
 )

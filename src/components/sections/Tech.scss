@@ -1,0 +1,24 @@
+.tech {
+  .logo-circle {
+    width: 30%;
+    margin: auto;
+  }
+  .card-tech {
+    box-shadow: 27px 24px 50px rgba(32, 32, 35, 0.1);
+    border-radius: 30px;
+    width: 200px;
+    margin-bottom: 10%;
+    border: 1px white;
+  }
+  .dot {
+    height: 15px;
+    width: 15px;
+    background-color: #7b5d95;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 5px;
+  }
+  .center-box{
+      text-align: -webkit-center;
+  }
+}

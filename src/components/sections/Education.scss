@@ -1,0 +1,29 @@
+.education {
+  .card-ed {
+    background: rgb(73, 47, 97);
+    box-shadow: 15px 20px 30px rgba(123, 93, 149, 0.5);
+    border-radius: 20px;
+    color: white;
+    min-height: 200px;
+  }
+  .flex-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .img-box2 {
+    width: 40px;
+  }
+  .img-box3 {
+    width: 50px;
+  }
+  .title-pos{
+    font-family: "Pacifico", cursive !important;
+    color: gray;
+  }
+  @media (max-width: 600px) {
+    .card-ed {
+      min-height: unset;
+    }
+  }
+}

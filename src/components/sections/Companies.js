@@ -75,7 +75,6 @@ export const Companies = ({ description, jobsData }) => {
         {documentToReactComponents(description.json)}
       </CardComponent>
       <h2 className="mt-4 text-center">Companies</h2>
-      {console.log(jobsData)}
       {jobsData.map((item, index) => {
         const { company, id, logo, ...rest } = item.node
 

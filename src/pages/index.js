@@ -8,6 +8,8 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import Img from "gatsby-image"
 import { AboutMe } from "../components/sections/AboutMe"
 import { Companies } from "../components/sections/Companies"
+import { Education } from "../components/sections/Education"
+import { Tech } from "../components/sections/Tech"
 
 /* export const query = graphql`
   query {
@@ -32,6 +34,8 @@ const IndexPage = () => {
       edges: [{ node: experienceData }],
     },
     allContentfulJobs: { edges: jobsData },
+    allContentfulEducation: { edges: educationData },
+    allContentfulTechs: { edges: techData },
   } = useStaticQuery(
     graphql`
       query {
@@ -96,6 +100,39 @@ const IndexPage = () => {
             }
           }
         }
+        allContentfulEducation(sort: { fields: startDate, order: DESC }) {
+          edges {
+            education: node {
+              titleProfession
+              school
+              isCurrent
+              endDate(formatString: "YYYY-MM")
+              startDate(formatString: "YYYY-MM")
+              grade
+              id
+              description {
+                json
+              }
+            }
+          }
+        }
+        allContentfulTechs (sort: { fields: level, order: DESC }) {
+          edges {
+            tech: node {
+              id
+              name
+              level
+              logo {
+                fluid(maxWidth: 150) {
+                  ...GatsbyContentfulFluid
+                }
+                file {
+                  url
+                }
+              }
+            }
+          }
+        }
       }
     `
   )
@@ -111,6 +148,8 @@ const IndexPage = () => {
         <p>{personalData.currentCity}</p> */}
       <AboutMe personalData={personalData} />
       <Companies description={experienceData.description} jobsData={jobsData} />
+      <Education educationData={educationData} />
+      <Tech techData={techData} />
 
       {/* <img src={jobsData.techs[0].logo.file.url}></img> */}
 
