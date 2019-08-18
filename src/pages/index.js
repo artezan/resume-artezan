@@ -135,7 +135,7 @@ const IndexPage = () => {
       <Companies description={experienceData.description} jobsData={jobsData} />
       <Education educationData={educationData} />
       <Tech techData={techData} />
-      <Contact personalData={personalData} />
+      {/* <Contact personalData={personalData} /> */}
     </Layout>
   )
 }
