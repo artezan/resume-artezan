@@ -6,7 +6,7 @@ import ImageDynamic from "../ImageDynamic"
 
 export const Education = ({ educationData }) => {
   return (
-    <section className="education  mt-5 ">
+    <section data-aos="fade-up" className="education  mt-5 ">
       <h2 className="mt-5 text-center">Education</h2>
       <div className="row">
        

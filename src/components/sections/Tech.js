@@ -34,7 +34,7 @@ const nameLevel = level => {
 
 export const Tech = ({ techData }) => {
   return (
-    <section className="tech">
+    <section data-aos="fade-up" className="tech">
       <h2 className="mt-5 text-center mb-5 ">Technologies</h2>
       <div className="row align-self-center justify-content-center">
         {techData.map(({ tech }) => {

@@ -12,6 +12,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import "./layout.css"
 import "../styles/index.scss"
+import { Footer } from "./sections/Footer"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -26,6 +27,18 @@ const Layout = ({ children }) => {
           node {
             fullName
             ocupation
+
+            links {
+              logo {
+                fluid(maxWidth: 150) {
+                  ...GatsbyContentfulFluid
+                }
+                file {
+                  url
+                }
+              }
+              link
+            }
           }
         }
       }
@@ -41,11 +54,7 @@ const Layout = ({ children }) => {
       />
       <div className="container-body container">
         <main>{children}</main>
-        <footer>
-          {/*  © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a> */}
-        </footer>
+        <Footer links={data.allContentfulPersonalData.edges[0].node.links} />
       </div>
     </>
   )

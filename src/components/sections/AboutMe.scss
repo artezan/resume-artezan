@@ -8,5 +8,25 @@
   }
   .btn-pdf{
     width: 150px;
+    border-radius: 20px;
+    box-shadow: 0px 6px 30px rgba(108, 68, 140, 0.8);
+
   }
+  .img-ab{
+   margin-top: 5%
+  }
+  .btn-pdf{
+    margin-top: 5%
+  }
+
+  @media (max-width: 600px) {
+    .img-ab{
+      margin-top: 0%
+     }
+     .btn-pdf{
+       margin-top: 0%
+     }
+  }
+  
+
 }

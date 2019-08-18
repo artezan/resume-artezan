@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 
 import Layout from "../components/layout"
 import Image from "../components/image"
@@ -10,6 +10,9 @@ import { AboutMe } from "../components/sections/AboutMe"
 import { Companies } from "../components/sections/Companies"
 import { Education } from "../components/sections/Education"
 import { Tech } from "../components/sections/Tech"
+import { Contact } from "../components/sections/contact"
+import AOS from "aos"
+import 'aos/dist/aos.css';
 
 /* export const query = graphql`
   query {
@@ -26,6 +29,11 @@ import { Tech } from "../components/sections/Tech"
 ` */
 
 const IndexPage = () => {
+  useEffect(() => {
+    console.log('init')
+    AOS.init()
+  }, [])
+
   const {
     allContentfulPersonalData: {
       edges: [{ node: personalData }],
@@ -49,7 +57,6 @@ const IndexPage = () => {
               number
               email
               birthdate
-              links
               description {
                 json
               }
@@ -116,7 +123,7 @@ const IndexPage = () => {
             }
           }
         }
-        allContentfulTechs (sort: { fields: level, order: DESC }) {
+        allContentfulTechs(sort: { fields: level, order: DESC }) {
           edges {
             tech: node {
               id
@@ -140,22 +147,11 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Cesar Artezan" />
-
-      {/*  <h2  >{personalData.fullName}</h2>
-        <h3>{personalData.ocupation}</h3>
-        <p>{personalData.birthdate}</p>
-        <p>{personalData.birthplace}</p>
-        <p>{personalData.currentCity}</p> */}
       <AboutMe personalData={personalData} />
       <Companies description={experienceData.description} jobsData={jobsData} />
       <Education educationData={educationData} />
       <Tech techData={techData} />
-
-      {/* <img src={jobsData.techs[0].logo.file.url}></img> */}
-
-      {/* <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-        <Img fluid={jobsData.techs[0].logo.fluid} loading="lazy" />
-      </div> */}
+      <Contact personalData={personalData} />
     </Layout>
   )
 }

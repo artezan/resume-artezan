@@ -70,25 +70,34 @@ const Theme = ({ company, logo, isOdd, jobData }) => {
 export const Companies = ({ description, jobsData }) => {
   return (
     <section className="companies mt-5">
-      <CardComponent className="card-des">
-        <h2>Skills</h2>
-        {documentToReactComponents(description.json)}
-      </CardComponent>
-      <h2 className="mt-4 text-center">Companies</h2>
-      {jobsData.map((item, index) => {
-        const { company, id, logo, ...rest } = item.node
+      <div data-aos="fade-up">
+        <CardComponent className="card-des">
+          <h2>Skills</h2>
+          {documentToReactComponents(description.json)}
+        </CardComponent>
+      </div>
 
-        return (
-          <div key={id} className="row mt-5 mb-3">
-            <Theme
-              company={company}
-              logo={logo}
-              isOdd={!!(index % 2)}
-              jobData={rest}
-            />
-          </div>
-        )
-      })}
+      <div data-aos="fade-up">
+        <h2 className="mt-4 text-center">Companies</h2>
+        {jobsData.map((item, index) => {
+          const { company, id, logo, ...rest } = item.node
+
+          return (
+            <div
+              key={id}
+              data-aos={!!(index % 2) ? `fade-left` : `fade-right`}
+              className="row mt-5 mb-3"
+            >
+              <Theme
+                company={company}
+                logo={logo}
+                isOdd={!!(index % 2)}
+                jobData={rest}
+              />
+            </div>
+          )
+        })}
+      </div>
     </section>
   )
 }

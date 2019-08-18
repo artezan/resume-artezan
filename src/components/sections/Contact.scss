@@ -1,0 +1,37 @@
+.contact{
+    .card-contact{
+        box-shadow: 1px 2px 10px rgba(32, 32, 35, 0.1) !important;
+        border: unset;
+    }
+    .svg-icon {
+        width: 30px;
+        height: 30px;
+      }
+      
+      .svg-icon path,
+      .svg-icon polygon,
+      .svg-icon rect {
+        fill: var(--optional-color);
+        stroke-width: 10px;
+      }
+      
+      .svg-icon circle {
+        stroke: var(--optional-color);
+        stroke-width: 10px;
+      }
+      .svg-cell{
+        fill: none 
+
+      }
+      .svg-email{
+        fill: none
+
+      }
+     
+      @media (max-width: 600px) {
+        .font-email{
+            font-size: 5vw
+        }
+      }
+      
+}
