@@ -4,8 +4,6 @@ import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
 import { useStaticQuery, graphql } from "gatsby"
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
-import Img from "gatsby-image"
 import { AboutMe } from "../components/sections/AboutMe"
 import { Companies } from "../components/sections/Companies"
 import { Education } from "../components/sections/Education"
@@ -13,20 +11,6 @@ import { Tech } from "../components/sections/Tech"
 import { Contact } from "../components/sections/contact"
 import AOS from "aos"
 import 'aos/dist/aos.css';
-
-/* export const query = graphql`
-  query {
-    allContentfulExperience {
-      edges {
-        node {
-          description {
-            json
-          }
-        }
-      }
-    }
-  }
-` */
 
 const IndexPage = () => {
   useEffect(() => {

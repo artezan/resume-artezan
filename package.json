@@ -37,6 +37,7 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "npm run clean && env-cmd gatsby develop",
+    "pre:build": "npm run clean && env-cmd npm run build",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",
