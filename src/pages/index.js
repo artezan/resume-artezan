@@ -8,7 +8,7 @@ import { AboutMe } from "../components/sections/AboutMe"
 import { Companies } from "../components/sections/Companies"
 import { Education } from "../components/sections/Education"
 import { Tech } from "../components/sections/Tech"
-import { Contact } from "../components/sections/contact"
+import { Contact } from "../components/sections/Contact"
 import AOS from "aos"
 import 'aos/dist/aos.css';
 
@@ -135,7 +135,7 @@ const IndexPage = () => {
       <Companies description={experienceData.description} jobsData={jobsData} />
       <Education educationData={educationData} />
       <Tech techData={techData} />
-      {/* <Contact personalData={personalData} /> */}
+      <Contact personalData={personalData} />
     </Layout>
   )
 }
