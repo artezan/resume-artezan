@@ -19,7 +19,8 @@ function SEO({ description, lang, meta, title }) {
             title
             description
             author
-            image
+            image,
+            siteUrl
           }
         }
       }
@@ -72,11 +73,11 @@ function SEO({ description, lang, meta, title }) {
           },
           {
             property: `og:image`,
-            content: site.siteMetadata.image,
+            content:`${site.siteMetadata.siteUrl}${site.siteMetadata.image}`,
           },
           {
             property: `og:url`,
-            content: `https://keen-wozniak-403396.netlify.com`,
+            content: site.siteMetadata.siteUrl,
           },
         ].concat(meta)}
       />
