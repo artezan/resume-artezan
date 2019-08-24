@@ -2,7 +2,9 @@ module.exports = {
   siteMetadata: {
     title: `Cesar Artezan Cabrera`,
     description: `CV | Resume of Full Stack Developer Cesar Artezan Cabrera`,
-    author: `@CArtezan`
+    author: `@CArtezan`,
+    twitterUsername:"@CArtezan",
+    image: "/images/profile.jpg"
   },
   plugins: [
     {
