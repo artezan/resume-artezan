@@ -85,7 +85,7 @@ export const Companies = ({ description, jobsData }) => {
           return (
             <div
               key={id}
-              data-aos={!!(index % 2) ? `fade-left` : `fade-right`}
+              data-aos="fade-up"
               className="row mt-5 mb-3"
             >
               <Theme
