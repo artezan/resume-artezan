@@ -76,6 +76,14 @@ function SEO({ description, lang, meta, title }) {
             content:`${site.siteMetadata.siteUrl}${site.siteMetadata.image}`,
           },
           {
+            property: `og:description`,
+            content: site.siteMetadata.description,
+          },
+          {
+            property: `og:title`,
+            content: site.siteMetadata.title,
+          },
+          {
             property: `og:url`,
             content: site.siteMetadata.siteUrl,
           },
