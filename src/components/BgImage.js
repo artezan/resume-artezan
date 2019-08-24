@@ -8,7 +8,7 @@ const BackgroundSection = ({ className, children }) => (
       query {
         desktop: file(relativePath: { eq: "coding-language.jpg" }) {
           childImageSharp {
-            fluid(quality: 90, maxWidth: 4160) {
+            fluid(quality: 90, maxWidth: 5160) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }
@@ -23,6 +23,7 @@ const BackgroundSection = ({ className, children }) => (
                            className={className}
                            fluid={imageData}
                            backgroundColor={`#040e18`}
+                         
           >
            <span>{children}</span>
           </BackgroundImage>

@@ -1,9 +1,9 @@
 .cover {
   z-index: -100;
-  position: absolute ;
+  position: absolute;
   height: 70vh;
   /* Create the parallax scrolling effect */
-  background-attachment: fixed;
+  // background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -53,18 +53,18 @@
   height: auto;
 }
 
-@media (max-width: 600px) {
- 
+@media    (max-width: 600px) {
   .cover {
     height: 505px;
     // height: 100%;
     position: inherit !important;
+    background-attachment: scroll !important;
+    background-position:  left 500px ;
   }
   .mh-header-info h2 {
     margin-top: 2px;
     margin-bottom: 10px;
-  font-size: 3.8em;
-
+    font-size: 3.8em;
   }
   .mh-header-info h3 {
     font-size: 28px;
@@ -75,5 +75,10 @@
     border: 20px;
     margin: 0 auto;
     border-radius: 50%;
+  }
+}
+@media (min-width: 390px) and (max-width: 600px) {
+  .img-border {
+    width: 80% !important;
   }
 }

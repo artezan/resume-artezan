@@ -8,6 +8,7 @@ import BackgroundSection from "./BgImage"
 
 const Header = ({ siteTitle, fullName, ocupation }) => (
   <header>
+    
     <BackgroundSection className="cover">
       <div className="container flex-box">
         <div className="col-sm-6 ">

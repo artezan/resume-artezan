@@ -15,8 +15,9 @@ $theme-colors: (
 
 html body {
   font-family: "Roboto Slab", serif;
-  background-color: rgba(255, 255, 255, 0);
+  background-color: $body-bg;
 }
+
 .container-body {
   z-index: 100;
   position: relative;
@@ -24,7 +25,11 @@ html body {
 }
 
 @media (max-width: 600px) {
+  html body {
+    background-color: rgba(255, 255, 255, 0);
+  }
   .container-body {
+
     display: block;
     border-radius: 30px !important;
   }
