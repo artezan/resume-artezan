@@ -5,7 +5,7 @@ module.exports = {
     author: `@CArtezan`,
     twitterUsername: "@CArtezan",
     image: "/imgpre.png",
-    siteUrl: "https://keen-wozniak-403396.netlify.com",
+    siteUrl: "https://cesar-artezan.netlify.com",
   },
   plugins: [
     {
