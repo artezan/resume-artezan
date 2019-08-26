@@ -4,7 +4,7 @@ module.exports = {
     description: `CV | Resume of Full Stack Developer Cesar Artezan Cabrera`,
     author: `@CArtezan`,
     twitterUsername: "@CArtezan",
-    image: "/profile.jpg",
+    image: "/imgpre.png",
     siteUrl: "https://keen-wozniak-403396.netlify.com",
   },
   plugins: [
